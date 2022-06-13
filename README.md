@@ -19,3 +19,20 @@ Yes. I've just made it accessable to all players. Not just police.
 
 Yes. Duplication glitches that work on items will work on this. Use at your own risk.
 
+
+## Environment Variables
+
+To run this project, you will need to add the following to your qb-inventory>html>js>app.js
+
+```
+        else if (itemData.name == "money_bag") {
+            $(".item-info-title").html("<p>" + itemData.label + "</p>");
+            $(".item-info-description").html(
+                "<p><strong>Amount of cash: </strong><span>$" +
+                itemData.info.cash +
+                "</span></p>" + "<p><strong>User: </strong><span>$" +
+                itemData.info.user +
+                "</span></p>"
+            );
+        }
+```
